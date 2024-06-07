@@ -48,8 +48,8 @@ $material-3-demo-theme: mat.define-theme((
 @include mat.typography-hierarchy($material-3-demo-theme);
 
 // Comment out the line below if you want to use the deprecated `color` inputs.
-// @include mat.color-variants-backwards-compatibility($material-3-demo-theme);
-/* You can add global styles to this file, and also import other style files */
+@include mat.color-variants-backwards-compatibility($material-3-demo-theme);
 
+/* You can add global styles to this file, and also import other style files */
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
