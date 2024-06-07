@@ -32,15 +32,21 @@ $material-3-demo-theme: mat.define-theme((
   --mdc-fab-container-shape: 9999px;
 
   // Increase button height
-  --mdc-text-button-container-height: calc(40px * 1.25);
-  --mdc-protected-button-container-height: calc(40px * 1.25);
-  --mdc-outlined-button-container-height: calc(40px * 1.25);
-  --mdc-filled-button-container-height: calc(40px * 1.25);
+  --mdc-text-button-container-height: calc(40px * 1.15);
+  --mat-text-button-horizontal-padding: calc(24px * 1.15);
+  --mdc-text-button-label-text-size: calc(0.875rem * 1.15);
 
-  --mat-text-button-horizontal-padding: calc(24px * 1.25);
-  --mat-protected-button-horizontal-padding: calc(24px * 1.25);
-  --mat-outlined-button-horizontal-padding: calc(24px * 1.25);
-  --mat-filled-button-horizontal-padding: calc(24px * 1.25);
+  --mdc-protected-button-container-height: calc(40px * 1.15);
+  --mat-protected-button-horizontal-padding: calc(24px * 1.15);
+  --mdc-protected-button-label-text-size: calc(0.875rem * 1.15);
+
+  --mdc-outlined-button-container-height: calc(40px * 1.15);
+  --mat-outlined-button-horizontal-padding: calc(24px * 1.15);
+  --mdc-outlined-button-label-text-size: calc(0.875rem * 1.15);
+
+  --mdc-filled-button-container-height: calc(40px * 1.15);
+  --mat-filled-button-horizontal-padding: calc(24px * 1.15);
+  --mdc-filled-button-label-text-size: calc(0.875rem * 1.15);
 }
 
 // Comment out the line below if you want to use the pre-defined typography utility classes.
