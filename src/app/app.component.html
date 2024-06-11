@@ -1,12 +1,11 @@
 <h1>Kitchen sink</h1>
 <h2>Buttons</h2>
-
 <section>
   <div class="example-label">Basic</div>
   <div class="example-button-row">
-    <button mat-button>Basic</button>
+    <button mat-button size="small">Basic</button>
     <button mat-button color="primary">Primary</button>
-    <button mat-button color="accent">Accent</button>
+    <button mat-button size="large" color="accent">Accent</button>
     <button mat-button color="warn">Warn</button>
     <button mat-button disabled>Disabled</button>
     <a mat-button href="https://www.google.com/" target="_blank">Link</a>
@@ -16,21 +15,21 @@
 <section>
   <div class="example-label">Raised</div>
   <div class="example-button-row">
-    <button mat-raised-button size="large">Basic</button>
-    <button mat-raised-button size="large" color="primary">Primary</button>
+    <button mat-raised-button size="small">Basic</button>
+    <button mat-raised-button color="primary">Primary</button>
     <button mat-raised-button size="large" color="accent">Accent</button>
-    <button mat-raised-button size="large" color="warn">Warn</button>
-    <button mat-raised-button size="large" disabled>Disabled</button>
-    <a mat-raised-button size="large" href="https://www.google.com/" target="_blank">Link</a>
+    <button mat-raised-button color="warn">Warn</button>
+    <button mat-raised-button disabled>Disabled</button>
+    <a mat-raised-button href="https://www.google.com/" target="_blank">Link</a>
   </div>
 </section>
 <mat-divider></mat-divider>
 <section>
   <div class="example-label">Stroked</div>
   <div class="example-button-row">
-    <button mat-stroked-button>Basic</button>
+    <button mat-stroked-button size="small">Basic</button>
     <button mat-stroked-button color="primary">Primary</button>
-    <button mat-stroked-button color="accent">Accent</button>
+    <button mat-stroked-button size="large" color="accent">Accent</button>
     <button mat-stroked-button color="warn">Warn</button>
     <button mat-stroked-button disabled>Disabled</button>
     <a mat-stroked-button href="https://www.google.com/" target="_blank">Link</a>
@@ -41,11 +40,11 @@
   <div class="example-label">Flat</div>
   <div class="example-button-row">
     <button mat-flat-button size="small">Basic</button>
-    <button mat-flat-button size="small" color="primary">Primary</button>
-    <button mat-flat-button size="small" color="accent">Accent</button>
-    <button mat-flat-button size="small" color="warn">Warn</button>
-    <button mat-flat-button size="small" disabled>Disabled</button>
-    <a mat-flat-button size="small" href="https://www.google.com/" target="_blank">Link</a>
+    <button mat-flat-button class="mat-secondary">Primary</button>
+    <button mat-flat-button size="large" class="mat-tertiary">Accent</button>
+    <button mat-flat-button color="warn">Warn</button>
+    <button mat-flat-button disabled>Disabled</button>
+    <a mat-flat-button href="https://www.google.com/" target="_blank">Link</a>
   </div>
 </section>
 <mat-divider></mat-divider>
@@ -77,7 +76,7 @@
   <div class="example-button-row">
     <div class="example-flex-container">
       <div class="example-button-container">
-        <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
+        <button mat-fab size="small" color="primary" aria-label="Example icon button with a delete icon">
           <mat-icon>delete</mat-icon>
         </button>
       </div>
@@ -87,7 +86,7 @@
         </button>
       </div>
       <div class="example-button-container">
-        <button mat-fab color="warn" aria-label="Example icon button with a home icon">
+        <button mat-fab size="large" color="warn" aria-label="Example icon button with a home icon">
           <mat-icon>home</mat-icon>
         </button>
       </div>
@@ -105,7 +104,7 @@
   <div class="example-button-row">
     <div class="example-flex-container">
       <div class="example-button-container">
-        <button mat-mini-fab color="primary" aria-label="Example icon button with a menu icon">
+        <button mat-mini-fab size="small" color="primary" aria-label="Example icon button with a menu icon">
           <mat-icon>menu</mat-icon>
         </button>
       </div>
@@ -115,7 +114,7 @@
         </button>
       </div>
       <div class="example-button-container">
-        <button mat-mini-fab color="warn" aria-label="Example icon button with a filter list icon">
+        <button mat-mini-fab size="large" color="warn" aria-label="Example icon button with a filter list icon">
           <mat-icon>filter_list</mat-icon>
         </button>
       </div>
@@ -127,3 +126,7 @@
     </div>
   </div>
 </section>
+<h2>Slide toggle</h2>
+<mat-slide-toggle size="small">Slide me!</mat-slide-toggle>
+<mat-slide-toggle>Slide me!</mat-slide-toggle>
+<mat-slide-toggle size="large">Slide me!</mat-slide-toggle>
