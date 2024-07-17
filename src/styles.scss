@@ -1,7 +1,7 @@
-
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
-@use '@angular/material' as mat;
+@use "@angular/material" as mat;
+@use "./m3-theme" as my-themes;
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -9,23 +9,11 @@
 // Be sure that you only ever include this mixin once!
 @include mat.core();
 
-// Define the theme object.
-$material-3-demo-theme: mat.define-theme((
-  color: (  
-    theme-type: light,
-    primary: mat.$azure-palette,
-    tertiary: mat.$blue-palette,
-  ),
-  density: (
-    scale: 0,
-  ) 
-));
-
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 :root {
-  @include mat.all-component-themes($material-3-demo-theme);
+  @include mat.all-component-themes(my-themes.$light-theme);
 
   --material-scale-ratio-neg1: 0.85;
   --material-scale-ratio-0: 1;
@@ -42,21 +30,45 @@ $material-3-demo-theme: mat.define-theme((
   a[mat-stroked-button] {
     --app-button-scale-ratio: var(--material-scale-ratio-1);
 
-    --mdc-text-button-container-height: calc(40px * var(--app-button-scale-ratio));
-    --mat-text-button-horizontal-padding: calc(24px * var(--app-button-scale-ratio));
-    --mdc-text-button-label-text-size: calc(0.875rem * var(--app-button-scale-ratio));
-  
-    --mdc-protected-button-container-height: calc(40px * var(--app-button-scale-ratio));
-    --mat-protected-button-horizontal-padding: calc(24px * var(--app-button-scale-ratio));
-    --mdc-protected-button-label-text-size: calc(0.875rem * var(--app-button-scale-ratio));
-  
-    --mdc-outlined-button-container-height: calc(40px * var(--app-button-scale-ratio));
-    --mat-outlined-button-horizontal-padding: calc(24px * var(--app-button-scale-ratio));
-    --mdc-outlined-button-label-text-size: calc(0.875rem * var(--app-button-scale-ratio));
-  
-    --mdc-filled-button-container-height: calc(40px * var(--app-button-scale-ratio));
-    --mat-filled-button-horizontal-padding: calc(24px * var(--app-button-scale-ratio));
-    --mdc-filled-button-label-text-size: calc(0.875rem * var(--app-button-scale-ratio));
+    --mdc-text-button-container-height: calc(
+      40px * var(--app-button-scale-ratio)
+    );
+    --mat-text-button-horizontal-padding: calc(
+      24px * var(--app-button-scale-ratio)
+    );
+    --mdc-text-button-label-text-size: calc(
+      0.875rem * var(--app-button-scale-ratio)
+    );
+
+    --mdc-protected-button-container-height: calc(
+      40px * var(--app-button-scale-ratio)
+    );
+    --mat-protected-button-horizontal-padding: calc(
+      24px * var(--app-button-scale-ratio)
+    );
+    --mdc-protected-button-label-text-size: calc(
+      0.875rem * var(--app-button-scale-ratio)
+    );
+
+    --mdc-outlined-button-container-height: calc(
+      40px * var(--app-button-scale-ratio)
+    );
+    --mat-outlined-button-horizontal-padding: calc(
+      24px * var(--app-button-scale-ratio)
+    );
+    --mdc-outlined-button-label-text-size: calc(
+      0.875rem * var(--app-button-scale-ratio)
+    );
+
+    --mdc-filled-button-container-height: calc(
+      40px * var(--app-button-scale-ratio)
+    );
+    --mat-filled-button-horizontal-padding: calc(
+      24px * var(--app-button-scale-ratio)
+    );
+    --mdc-filled-button-label-text-size: calc(
+      0.875rem * var(--app-button-scale-ratio)
+    );
 
     &.material-size-small {
       --app-button-scale-ratio: var(--material-scale-ratio-0);
@@ -71,8 +83,12 @@ $material-3-demo-theme: mat.define-theme((
   a[mat-icon-button] {
     --app-icon-button-scale-ratio: var(--material-scale-ratio-1);
 
-    --mdc-icon-button-state-layer-size: calc(40px * var(--app-icon-button-scale-ratio));
-    --mdc-icon-button-icon-size: calc(24px * var(--app-icon-button-scale-ratio));
+    --mdc-icon-button-state-layer-size: calc(
+      40px * var(--app-icon-button-scale-ratio)
+    );
+    --mdc-icon-button-icon-size: calc(
+      24px * var(--app-icon-button-scale-ratio)
+    );
 
     & mat-icon {
       width: calc(24px * var(--app-icon-button-scale-ratio));
@@ -142,29 +158,53 @@ $material-3-demo-theme: mat.define-theme((
   mat-slide-toggle {
     --app-slide-toggle-scale-ratio: var(--material-scale-ratio-1);
 
-    --mat-switch-label-text-line-height: calc(1.25rem * var(--app-slide-toggle-scale-ratio));
-    --mat-switch-label-text-size: calc(0.875rem * var(--app-slide-toggle-scale-ratio));
+    --mat-switch-label-text-line-height: calc(
+      1.25rem * var(--app-slide-toggle-scale-ratio)
+    );
+    --mat-switch-label-text-size: calc(
+      0.875rem * var(--app-slide-toggle-scale-ratio)
+    );
 
-    --mdc-switch-selected-icon-size: calc(16px * var(--app-slide-toggle-scale-ratio));
-    --mdc-switch-unselected-icon-size: calc(16px * var(--app-slide-toggle-scale-ratio));
+    --mdc-switch-selected-icon-size: calc(
+      16px * var(--app-slide-toggle-scale-ratio)
+    );
+    --mdc-switch-unselected-icon-size: calc(
+      16px * var(--app-slide-toggle-scale-ratio)
+    );
 
     --mdc-switch-track-width: calc(52px * var(--app-slide-toggle-scale-ratio));
     --mdc-switch-track-height: calc(32px * var(--app-slide-toggle-scale-ratio));
 
-    --mat-switch-selected-handle-size: calc(24px * var(--app-slide-toggle-scale-ratio));
-    --mat-switch-selected-handle-horizontal-margin: 0 calc(24px * var(--app-slide-toggle-scale-ratio));
-    --mat-switch-pressed-handle-size: calc(28px * var(--app-slide-toggle-scale-ratio));
-    --mat-switch-selected-pressed-handle-horizontal-margin: 0 calc(22px * var(--app-slide-toggle-scale-ratio));
-    
-    --mat-switch-unselected-handle-size: calc(16px * var(--app-slide-toggle-scale-ratio));
-    --mat-switch-unselected-handle-horizontal-margin: 0 calc(8px * var(--app-slide-toggle-scale-ratio));
-    --mat-switch-unselected-pressed-handle-horizontal-margin: 0 calc(2px * var(--app-slide-toggle-scale-ratio));
-    
-    --mat-switch-with-icon-handle-size: calc(24px * var(--app-slide-toggle-scale-ratio));
-    --mat-switch-selected-with-icon-handle-horizontal-margin: 0 calc(24px * var(--app-slide-toggle-scale-ratio));
-    --mat-switch-unselected-with-icon-handle-horizontal-margin: 0 calc(4px * var(--app-slide-toggle-scale-ratio));
+    --mat-switch-selected-handle-size: calc(
+      24px * var(--app-slide-toggle-scale-ratio)
+    );
+    --mat-switch-selected-handle-horizontal-margin: 0
+      calc(24px * var(--app-slide-toggle-scale-ratio));
+    --mat-switch-pressed-handle-size: calc(
+      28px * var(--app-slide-toggle-scale-ratio)
+    );
+    --mat-switch-selected-pressed-handle-horizontal-margin: 0
+      calc(22px * var(--app-slide-toggle-scale-ratio));
 
-    --mat-switch-track-outline-width: calc(2px * var(--app-slide-toggle-scale-ratio));
+    --mat-switch-unselected-handle-size: calc(
+      16px * var(--app-slide-toggle-scale-ratio)
+    );
+    --mat-switch-unselected-handle-horizontal-margin: 0
+      calc(8px * var(--app-slide-toggle-scale-ratio));
+    --mat-switch-unselected-pressed-handle-horizontal-margin: 0
+      calc(2px * var(--app-slide-toggle-scale-ratio));
+
+    --mat-switch-with-icon-handle-size: calc(
+      24px * var(--app-slide-toggle-scale-ratio)
+    );
+    --mat-switch-selected-with-icon-handle-horizontal-margin: 0
+      calc(24px * var(--app-slide-toggle-scale-ratio));
+    --mat-switch-unselected-with-icon-handle-horizontal-margin: 0
+      calc(4px * var(--app-slide-toggle-scale-ratio));
+
+    --mat-switch-track-outline-width: calc(
+      2px * var(--app-slide-toggle-scale-ratio)
+    );
 
     &.material-size-small {
       --app-slide-toggle-scale-ratio: var(--material-scale-ratio-0);
@@ -177,20 +217,38 @@ $material-3-demo-theme: mat.define-theme((
 }
 
 button.mat-secondary {
-  @include mat.button-color($material-3-demo-theme, $color-variant: secondary);
+  @include mat.button-color(my-themes.$light-theme, $color-variant: secondary);
 }
 
 button.mat-tertiary {
-  @include mat.button-color($material-3-demo-theme, $color-variant: tertiary);
+  @include mat.button-color(my-themes.$light-theme, $color-variant: tertiary);
+}
+
+.dark-theme {
+  @include mat.all-component-colors(my-themes.$dark-theme);
+
+  button.mat-secondary {
+    @include mat.button-color(my-themes.$dark-theme, $color-variant: secondary);
+  }
+
+  button.mat-tertiary {
+    @include mat.button-color(my-themes.$dark-theme, $color-variant: tertiary);
+  }
 }
 
 // Comment out the line below if you want to use the pre-defined typography utility classes.
 // For more information: https://material.angular.io/guide/typography#using-typography-styles-in-your-application.
-@include mat.typography-hierarchy($material-3-demo-theme);
+@include mat.typography-hierarchy(my-themes.$light-theme);
 
 // Comment out the line below if you want to use the deprecated `color` inputs.
-// @include mat.color-variants-backwards-compatibility($material-3-demo-theme);
+// @include mat.color-variants-backwards-compatibility(my-themes.$light-theme);
 
 /* You can add global styles to this file, and also import other style files */
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

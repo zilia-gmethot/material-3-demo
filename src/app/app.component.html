@@ -1,5 +1,6 @@
 <h1>Material 3 Demo</h1>
 <h2>Buttons</h2>
+<button mat-button (click)="changeTheme()">Change theme</button>
 <section>
   <div class="example-label">Basic</div>
   <div class="example-button-row">
@@ -32,7 +33,9 @@
     <button mat-stroked-button size="large" color="accent">Accent</button>
     <button mat-stroked-button color="warn">Warn</button>
     <button mat-stroked-button disabled>Disabled</button>
-    <a mat-stroked-button href="https://www.google.com/" target="_blank">Link</a>
+    <a mat-stroked-button href="https://www.google.com/" target="_blank"
+      >Link</a
+    >
   </div>
 </section>
 <mat-divider></mat-divider>
@@ -52,19 +55,40 @@
   <div class="example-label">Icon</div>
   <div class="example-button-row">
     <div class="example-flex-container">
-      <button mat-icon-button size="small" aria-label="Example icon button with a vertical three dot icon">
+      <button
+        mat-icon-button
+        size="small"
+        aria-label="Example icon button with a vertical three dot icon"
+      >
         <mat-icon>more_vert</mat-icon>
       </button>
-      <button mat-icon-button color="primary" aria-label="Example icon button with a home icon">
+      <button
+        mat-icon-button
+        color="primary"
+        aria-label="Example icon button with a home icon"
+      >
         <mat-icon>home</mat-icon>
       </button>
-      <button mat-icon-button size="large" color="accent" aria-label="Example icon button with a menu icon">
+      <button
+        mat-icon-button
+        size="large"
+        color="accent"
+        aria-label="Example icon button with a menu icon"
+      >
         <mat-icon>menu</mat-icon>
       </button>
-      <button mat-icon-button color="warn" aria-label="Example icon button with a heart icon">
+      <button
+        mat-icon-button
+        color="warn"
+        aria-label="Example icon button with a heart icon"
+      >
         <mat-icon>favorite</mat-icon>
       </button>
-      <button mat-icon-button disabled aria-label="Example icon button with a open in new tab icon">
+      <button
+        mat-icon-button
+        disabled
+        aria-label="Example icon button with a open in new tab icon"
+      >
         <mat-icon>open_in_new</mat-icon>
       </button>
     </div>
@@ -76,22 +100,40 @@
   <div class="example-button-row">
     <div class="example-flex-container">
       <div class="example-button-container">
-        <button mat-fab size="small" color="primary" aria-label="Example icon button with a delete icon">
+        <button
+          mat-fab
+          size="small"
+          color="primary"
+          aria-label="Example icon button with a delete icon"
+        >
           <mat-icon>delete</mat-icon>
         </button>
       </div>
       <div class="example-button-container">
-        <button mat-fab color="accent" aria-label="Example icon button with a bookmark icon">
+        <button
+          mat-fab
+          color="accent"
+          aria-label="Example icon button with a bookmark icon"
+        >
           <mat-icon>bookmark</mat-icon>
         </button>
       </div>
       <div class="example-button-container">
-        <button mat-fab size="large" color="warn" aria-label="Example icon button with a home icon">
+        <button
+          mat-fab
+          size="large"
+          color="warn"
+          aria-label="Example icon button with a home icon"
+        >
           <mat-icon>home</mat-icon>
         </button>
       </div>
       <div class="example-button-container">
-        <button mat-fab disabled aria-label="Example icon button with a heart icon">
+        <button
+          mat-fab
+          disabled
+          aria-label="Example icon button with a heart icon"
+        >
           <mat-icon>favorite</mat-icon>
         </button>
       </div>
@@ -104,29 +146,66 @@
   <div class="example-button-row">
     <div class="example-flex-container">
       <div class="example-button-container">
-        <button mat-mini-fab size="small" color="primary" aria-label="Example icon button with a menu icon">
+        <button
+          mat-mini-fab
+          size="small"
+          color="primary"
+          aria-label="Example icon button with a menu icon"
+        >
           <mat-icon>menu</mat-icon>
         </button>
       </div>
       <div class="example-button-container">
-        <button mat-mini-fab color="accent" aria-label="Example icon button with a plus one icon">
+        <button
+          mat-mini-fab
+          color="accent"
+          aria-label="Example icon button with a plus one icon"
+        >
           <mat-icon>plus_one</mat-icon>
         </button>
       </div>
       <div class="example-button-container">
-        <button mat-mini-fab size="large" color="warn" aria-label="Example icon button with a filter list icon">
+        <button
+          mat-mini-fab
+          size="large"
+          color="warn"
+          aria-label="Example icon button with a filter list icon"
+        >
           <mat-icon>filter_list</mat-icon>
         </button>
       </div>
       <div class="example-button-container">
-        <button mat-mini-fab disabled aria-label="Example icon button with a home icon">
+        <button
+          mat-mini-fab
+          disabled
+          aria-label="Example icon button with a home icon"
+        >
           <mat-icon>home</mat-icon>
         </button>
       </div>
     </div>
   </div>
 </section>
+<mat-divider></mat-divider>
 <h2>Slide toggle</h2>
 <mat-slide-toggle size="small">Slide me!</mat-slide-toggle>
 <mat-slide-toggle>Slide me!</mat-slide-toggle>
 <mat-slide-toggle size="large">Slide me!</mat-slide-toggle>
+<mat-divider></mat-divider>
+
+<h2>Typography</h2>
+<div class="mat-display-large">Display large (h1)</div>
+<div class="mat-display-medium">Display medium (h2)</div>
+<div class="mat-display-small">Display small (h3)</div>
+<div class="mat-headline-large">Headline large (h4)</div>
+<div class="mat-headline-medium">Headline medium (h5)</div>
+<div class="mat-headline-small">Headline small (h6)</div>
+<div class="mat-title-large">Title large</div>
+<div class="mat-title-medium">Title medium</div>
+<div class="mat-title-small">Title small</div>
+<div class="mat-body-large">Body large (p, a, span, div)</div>
+<div class="mat-body-medium">Body medium</div>
+<div class="mat-body-small">Body small</div>
+<div class="mat-label-large">Label large</div>
+<div class="mat-label-medium">Label medium</div>
+<div class="mat-label-small">Label small</div>
